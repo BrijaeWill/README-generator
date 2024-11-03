@@ -1,8 +1,9 @@
 // TODO: Include packages needed for this application
-const fs = require("fs");
-const { default: generateMarkdown } = require("./utils/generateMarkdown");
+import { promises } from "fs";
+import { default as generateMarkdown } from "./utils/generateMarkdown";
 // TODO: Create an array of questions for user input
-const questions = [ {
+const questions = [
+  {
     type: "input",
     name: "title",
     message: "What is the title of your project",
@@ -105,33 +106,32 @@ const questions = [ {
         return false;
       }
     },
-  },];
+  },
+];
 
 // TODO: Create a function to write README file
 
 const writeToFile = async (fileName, data) => {
   try {
-        await fs.promises.writeFile(fileName, data);
-        return ({
-            ok: true
-        });
-    } catch (err) {
-        throw err;
-    }
+    await promises.writeFile(fileName, data);
+    return {
+      ok: true,
+    };
+  } catch (err) {
+    throw err;
+  }
 };
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.prompt(questions)
-    .then(function(data){
-        console.log(data);
-        var fileContent = generateMarkdown(data);
-        writeToFile(fileContent);
-    })
+  inquirer.prompt(questions).then(function (data) {
+    console.log(data);
+    var fileContent = generateMarkdown(data);
+    writeToFile(fileContent);
+  });
 }
 
 // Function call to initialize app
 init();
 
-
-module.exports = questions;
+export default questions;
