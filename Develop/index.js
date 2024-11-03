@@ -1,6 +1,8 @@
 // TODO: Include packages needed for this application
-import { promises } from "fs";
-import { default as generateMarkdown } from "./utils/generateMarkdown";
+import { promises as fs } from 'fs';
+import inquirer from 'inquirer';
+import generateMarkdown from './utils/generateMarkdown.js';
+
 // TODO: Create an array of questions for user input
 const questions = [
   {
@@ -33,8 +35,8 @@ const questions = [
     name: "liscense",
     message: "What liscense does your project use?",
     choices: ["None", "Apache 2.0", "MIT", "GPL v3.0"],
-    validate: (licenseInput = () => {
-      if (lisenseInput) {
+    validate: (liscenseInput => {
+      if (liscenseInput) {
         return true;
       } else {
         console.log("Please select one of the four options");
@@ -111,22 +113,25 @@ const questions = [
 
 // TODO: Create a function to write README file
 
-const writeToFile = async (fileName, data) => {
-  try {
-    await promises.writeFile(fileName, data);
-    return {
-      ok: true,
-    };
-  } catch (err) {
-    throw err;
-  }
+const writeToFile = fileContent => {
+    return new Promise((resolve, reject) => {
+        fs.writeFile('./generatedREADME.md', fileContent, err => {
+            if (err) {
+                reject(err);
+                return;
+            }
+            resolve({
+                ok: true
+            });
+        });
+    });
 };
 
 // TODO: Create a function to initialize app
 function init() {
-  inquirer.prompt(questions).then(function (data) {
-    console.log(data);
-    var fileContent = generateMarkdown(data);
+  inquirer.prompt(questions).then(function (answer) {
+    console.log(answer);
+    var fileContent = generateMarkdown(answer);
     writeToFile(fileContent);
   });
 }
