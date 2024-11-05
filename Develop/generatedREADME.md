@@ -1,8 +1,8 @@
 
-  # Project title
+  # Project 2
 
-  ## License: Apache 2.0  ![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
-  ### http://www.apache.org/licenses/LICENSE-2.0
+  ## License: MIT  ![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)
+  ### https://choosealicense.com/licenses/mit/
     ## Table of Contents:
   ###  * [Installation](#installation)
   ###  * [Usage](#usage)
@@ -13,22 +13,22 @@
 
   ## Installation:
   ### You must install the following for this app to function:
-  ### A computer
+  ### coming soon
 
   ## Usage:
-  ### hfhfhfd
+  ### Something cool coming
 
   ## Contributors:
-  ### Bob John Mark
+  ### Bob austin chris
 
   ## Tests:
   ### Run the following commands in your terminal to test this app:
-  ### dkdkkkdd
+  ### using vs code
 
   ## Questions:
   ### If you have any questions, you may contact me at either
-  ### Github: https://github.com/bob5
+  ### Github: https://github.com/bamb100
   ### or
-  ### Email: bob55@gmail.com
+  ### Email: bammy100@gmail.com
 
 
