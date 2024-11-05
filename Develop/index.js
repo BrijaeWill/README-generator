@@ -85,7 +85,7 @@ const questions = [
   },
   {
     type: "input",
-    name: "contributers",
+    name: "contributions",
     message: "Add your contributers for your project",
     validate: (contributerInput) =>{
       if(contributerInput){
@@ -99,7 +99,7 @@ const questions = [
   },
   {
     type: "input",
-    name: "github",
+    name: "askMe",
     message: "What is your Github username?",
     validate: (githubInput) => {
       if (githubInput) {

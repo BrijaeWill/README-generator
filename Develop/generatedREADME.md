@@ -1,5 +1,5 @@
 
-  # Readme generator
+  # Project title
 
   ## License: Apache 2.0  ![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
   ### http://www.apache.org/licenses/LICENSE-2.0
@@ -13,22 +13,22 @@
 
   ## Installation:
   ### You must install the following for this app to function:
-  ### Vs code 
+  ### A computer
 
   ## Usage:
-  ### Generate read me
+  ### hfhfhfd
 
   ## Contributors:
-  ### undefined
+  ### Bob John Mark
 
   ## Tests:
   ### Run the following commands in your terminal to test this app:
-  ### Using terminal 
+  ### dkdkkkdd
 
   ## Questions:
   ### If you have any questions, you may contact me at either
-  ### Github: https://github.com/undefined
+  ### Github: https://github.com/bob5
   ### or
-  ### Email: bumble5@gmail.com
+  ### Email: bob55@gmail.com
 
 
