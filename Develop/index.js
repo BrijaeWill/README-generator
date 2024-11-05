@@ -32,11 +32,11 @@ const questions = [
   },
   {
     type: "list",
-    name: "liscense",
+    name: "license",
     message: "What liscense does your project use?",
     choices: ["None", "Apache 2.0", "MIT", "GPL v3.0"],
-    validate: (liscenseInput => {
-      if (liscenseInput) {
+    validate: (licenseInput => {
+      if (licenseInput) {
         return true;
       } else {
         console.log("Please select one of the four options");
@@ -82,6 +82,20 @@ const questions = [
         return false;
       }
     },
+  },
+  {
+    type: "input",
+    name: "contributers",
+    message: "Add your contributers for your project",
+    validate: (contributerInput) =>{
+      if(contributerInput){
+        return true;
+      }else{
+        console.log("Please add your contributers for your project");
+        return false;
+      }
+    }
+
   },
   {
     type: "input",
